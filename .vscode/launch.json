@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Gdb) Launch Simple1",
+            "request": "launch",
+            "type": "cppdbg",
+            "cwd": "${workspaceFolder}/build/Simple1",
+            "program": "${workspaceFolder}/build/Simple1/simple1",
+            "MIMode": "gdb",
+            "stopAtEntry": false,
+            //"externalConsole": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "launchCompleteCommand": "exec-run"
+        }
+    ]
+}
