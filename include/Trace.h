@@ -1,0 +1,52 @@
+#pragma once
+#define ACE_NTRACE 0
+#include <ace/Log_Msg.h>
+
+#define DEBUG_PREFIX		ACE_TEXT("DEBUG%I")
+#define INFO_PREFIX			ACE_TEXT("INFO%")
+#define NOTICE_PREFIX		ACE_TEXT("NOTICE%I")
+#define WARNING_PREFIX		ACE_TEXT("WARNING%I")
+#define ERROR_PREFIX		ACE_TEXT("ERROR%I")
+#define CRITICAL_PREFIX		ACE_TEXT("CRITICAL%I")
+#define ALERT_PREFIX		ACE_TEXT("ALERT%I")
+#define EMERGENCY_PREFIX	ACE_TEXT("EMERGENCY%I")
+
+#define MY_DEBUG(FMT, ...)	\
+	ACE_DEBUG((LM_DEBUG,	\
+		DEBUG_PREFIX FMT	\
+		__VA_ARGS__))
+
+#define MY_INFO(FMT, ...)	\
+	ACE_DEBUG((LM_INFO,		\
+		INFO_PREFIX			\
+		__VA_ARGS__))
+
+#define MY_NOTICE(FMT, ...)	\
+	ACE_DEBUG((LM_NOTICE,	\
+		NOTICE_PREFIX FMT	\
+		__VA_ARGS__))
+
+#define MY_WARNING(FMT, ...)	\
+	ACE_DEBUG((LM_NOTICE,		\
+		WARNING_PREFIX FMT		\
+		__VA_ARGS__))
+
+#define MY_ERROR(FMT, ...)	\
+	ACE_DEBUG((LM_ERROR,	\
+		ERROR_PREFIX FMT	\
+		__VA_ARGS__))
+
+#define MY_CRITICAL(FMT, ...)	\
+	ACE_DEBUG((LM_CRITICAL,		\
+		CRITICAL_PREFIX FMT		\
+		__VA_ARGS__))
+
+#define MY_ALERT(FMT, ...)	\
+	ACE_DEBUG((LM_ALERT,	\
+		ALERT_PREFIX FMT	\
+		__VA_ARGS__))
+
+#define MY_EMERGENCY(FMT, ...)	\
+	ACE_DEBUG((LM_EMERGENCY,	\
+		EMERGENCY_PREFIX FMT	\
+		__VA_ARGS__))
