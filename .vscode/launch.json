@@ -55,6 +55,24 @@
                 }
             ],
             "launchCompleteCommand": "exec-run"
+        },
+        {
+            "name": "(Gdb) Launch Simple4",
+            "request": "launch",
+            "type": "cppdbg",
+            "cwd": "${workspaceFolder}/build/Simple4",
+            "program": "${workspaceFolder}/build/Simple4/simple4",
+            "MIMode": "gdb",
+            "stopAtEntry": false,
+            //"externalConsole": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "launchCompleteCommand": "exec-run"
         }
     ]
 }

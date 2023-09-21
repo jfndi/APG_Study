@@ -5,7 +5,8 @@
             "includePath": [
                 "${default}",
                 "/usr/local/include/**",
-                "/usr/include/**"
+                "/usr/include/**",
+                "${workspaceFolder}/include"
             ],
             "defines": [],
             "intelliSenseMode": "linux-gcc-x64",
