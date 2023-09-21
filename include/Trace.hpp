@@ -51,7 +51,7 @@ public:
                 ACE_TEXT("%s%*s(%t) leaving %s in file `%s`")
                 ACE_TEXT(" on line %d\n"),
                 this->prefix_,
-                Trace::nesting_indent_ * lm->inc(),
+                Trace::nesting_indent_ * lm->dec(),
                 ACE_TEXT(""),
                 this->name_,
                 this->file_,
