@@ -73,6 +73,24 @@
                 }
             ],
             "launchCompleteCommand": "exec-run"
+        },
+        {
+            "name": "(Gdb) Launch Syslog",
+            "request": "launch",
+            "type": "cppdbg",
+            "cwd": "${workspaceFolder}/build/Syslog",
+            "program": "${workspaceFolder}/build/Syslog/syslog",
+            "MIMode": "gdb",
+            "stopAtEntry": false,
+            //"externalConsole": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "launchCompleteCommand": "exec-run"
         }
     ]
 }
