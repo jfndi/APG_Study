@@ -91,6 +91,24 @@
                 }
             ],
             "launchCompleteCommand": "exec-run"
+        },
+        {
+            "name": "(Gdb) Launch CombinedLog",
+            "request": "launch",
+            "type": "cppdbg",
+            "cwd": "${workspaceFolder}/build/combinedlog",
+            "program": "${workspaceFolder}/build/Syslog/combinedlog",
+            "MIMode": "gdb",
+            "stopAtEntry": false,
+            //"externalConsole": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "launchCompleteCommand": "exec-run"
         }
     ]
 }
