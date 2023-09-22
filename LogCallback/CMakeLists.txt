@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(LogCallback VERSION 1.0)
+project(LogCallback VERSION 1.1)
 
 set(CMAKE_PREFIX_PATH /usr/local)
 find_library(ACE_LIBRARY NAMES libACE.so.7.1.1
