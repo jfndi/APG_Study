@@ -109,6 +109,24 @@
                 }
             ],
             "launchCompleteCommand": "exec-run"
+        },
+        {
+            "name": "(Gdb) Launch LogCallback",
+            "request": "launch",
+            "type": "cppdbg",
+            "cwd": "${workspaceFolder}/build/LogCallback",
+            "program": "${workspaceFolder}/build/LogCallback/logcallback",
+            "MIMode": "gdb",
+            "stopAtEntry": false,
+            //"externalConsole": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "launchCompleteCommand": "exec-run"
         }
     ]
 }
